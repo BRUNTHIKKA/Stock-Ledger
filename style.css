@@ -22,6 +22,10 @@ nav {
     display: flex;
     justify-content: space-between;
     height: 70px;
+    z-index: 999;
+    overflow: hidden;
+    position: relative;
+    
 
 }
 
@@ -79,7 +83,6 @@ nav ul li a:hover {
     font-size: 70px;
     color: #fff;
     font-weight: 600;
-    border: 1px solid red;
     position: absolute;
     top: 0;
     height: 100vh;
