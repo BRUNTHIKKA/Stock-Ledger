@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile and Notifications Dropdowns</title>
+    <link rel="stylesheet" href="style.css">
+    <script src = ""></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".profile .icon_wrap").click(function(){
+                $(this).parent().toggleClass("active");
+                $(".notifications").removeClass("active");
+            });
+
+            $(".notifications .icon_wrap").click(function(){
+                $(this).parent().toggleClass("active");
+                $(".profile").removeClass("active");
+            });
+
+            $(".link").click(function(){
+                $(".notifications").removeClass("active");  
+                $(".popup").addClass("active");
+            });
+
+            $(".close").click(function(){
+                $(".popup").removeClass("active");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="navbar_left">
+                <div class="logo">
+                    <a href="#">Stock Ledger</a>
+                </div>
+            </div>
+            <div class="navbar_right">
+                <div class="notifications">
+                    <div class="icon_wrap">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <div class="notifications_dd">
+                        <ul class="notifications_ul">
+                            <li class="title">
+                                <p>All Notifications</p>
+                                <p class="close">
+                                    <!-- close i class -->
+                                </p>
+                            </li>
+                            <li class="success username">
+                                <div class="notify_icon">
+                                    <span class="icon"></span>
+                                </div>
+                                <div class="notify_data">
+                                    <div class="title">
+                                        Lorem ipsum dolor sit.
+                                    </div>
+                                    <div class="sub_title">
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur.
+                                    </div>
+                                </div>
+                                <div class="notify_status">
+                                    <p>Success</p>
+                                </div>
+                            </li>
+
+                            <li class="failed email">
+                                <div class="notify_icon">
+                                    <span class="icon"></span>
+                                </div>
+                                <div class="notify_data">
+                                    <div class="title">
+                                        Lorem ipsum dolor sit.
+                                    </div>
+                                    <div class="sub_title">
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur.
+                                    </div>
+                                </div>
+                                <div class="notify_status">
+                                    <p>Failed</p>
+                                </div>
+                            </li>
+
+                            <li class="success password">
+                                <div class="notify_icon">
+
+                                </div>
+                                <div class="notify_data">
+                                    <div class="title">
+                                        Lorem ipsum dolor sit.
+                                    </div>
+                                    <div class="sub_title">
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur.
+                                    </div>
+                                </div>
+                                <div class="notify_status">
+                                    <p>Success</p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="icon_wrap">
+                        <img src="" alt="">
+                        <span class="name">John</span>
+                        <i class="fa-regular fa-circle-chevron-down"></i>
+                    </div>
+
+                    <div class="profile_dd">
+                        <ul class="profile_ul">
+                            <li class="profile_li">
+                                <a class="profile"  href="#">
+                                    <span class="picon">
+                                        <!-- Profile i class -->
+                                    </span>
+                                    Profile
+                                </a>
+                                <div class="btn">My Account</div>
+                                
+                            </li>
+                            <li>
+                                <a class="settings"  href="#">
+                                    <span class="picon">
+                                        <!-- Settings i class -->
+                                    </span>
+                                    Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a class="logout"  href="#">
+                                    <span class="picon">
+                                        <!-- Logout i class -->
+                                    </span>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="shadow"></div>
+            <div class="popup_inner"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif; 
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background: #dfecff;
+    color: #7f8db0;
+
+}
+
+a{
+    color: #7f8db0;  
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar{
+    background: #fff;
+    width: 100%;
+    height: 60px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.navbar .logo a{
+    font-size: 20px;
+    font-family: 'Trade Winds', cursive;
+}
+
+.navbar_right img{
+    width: 30px;
+}
+
+.navbar_right{
+    display:flex;
+}
+
+.navbar_right .icon_wrap{
+    cursor: pointer;
+}
+
+.navbar_right .notifications{
+    margin-right: 25px;   
+}
+
+.navbar_right .notifications .icon_wrap{
+    font-size: 28px;    
+}
+
+.navbar_right .notifications,
+.navbar_right .profile{
+    position: relative;
+}
+
+.notifications_dd,
+.profile_dd{
+    position: absolute;
+    top: 48px;
+    right: -15px;
+    background: #fff;
+    width: 350px;
+    height: auto;
+    border: 1px solid #c7d8e2;
+    border-radius: 3px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.125),
+    -10px -10px 30px rgba(0,0,0,0.125);
+    display: none;
+}
+
+.notifications_dd:before,
+.profile_dd:before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 15px;
+    border: 10px solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.notifications_dd li .notify_icon{
+    display: flex;
+}
+
+.notifications_dd li{
+    border-bottom: 1px solid #f1f2f4;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.notifications_dd li:last-child{
+    border-bottom: 0;
+}
+
+.notifications_dd li .notify_icon .icon{
+    background: url() no-repeat 0 0; 
+    /* username icon image */
+    width: 40px;
+    height: 42px;
+}
+
+.notifications_dd li .email .notify_icon .icon{
+    background-position: 0 -43px;
+}
+
+.notifications_dd li .password .notify_icon .icon{
+    background-position: 0 -86px;
+}
+
+.notifications_dd li .notify_data{
+    margin: 0 15px;
+    width: 185px;
+}
+
+.notifications_dd li .notify_data .title{
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.notifications_dd li .notify_data .sub_title{
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+}
+
+.notifications_dd li .notify_status p{
+    font-size: 12px;
+}
+
+.notifications_dd li.success .notify_status p{
+    color: #47da89;
+}
+
+.notifications_dd li.failed .notify_status p{
+    color: #fb0001;
+}
+
+.notifications_dd li.show_all{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.notifications_dd li.show_all p{
+    font-weight: 700;
+    color: #3b80f9;
+    cursor: pointer;
+}
+
+.notifications_dd li.show_all p:hover{
+   text-decoration: underline; 
+}
+
+.profile .icon_wrap{
+    display: flex;
+    align-items: center;
+}
+
+.profile .name{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar_right .icon_wrap:hover,
+.profile.active .icon_wrap,
+.notifications.active .icon_wrap{
+    color: #3b80f9;
+}
+
+.profile .profile_dd{
+    width: 225px;
+}
+
+.profile .profile_dd:before{
+    right: 10px;
+}
+
+.profile .profile_dd ul li{
+    border-bottom: 1px solid #f1f2f4;
+}
+
+.profile .profile_dd ul li:last-child{
+    border-bottom: 0px;
+}
+
+.profile .profile_dd ul li a{
+    display: block;
+    padding: 15px 35px;
+    position: relative;
+}
+
+.profile .profile_dd ul li a .picon{
+    width: 30px;
+    display: inline-block;
+}
+
+.profile .profile_dd ul li a:hover{
+    color: #3b80f9;
+    background: #f0f5ff;
+}
+
+.profile .profile_dd ul li.profile_li a:hover{
+    background: transparent;
+    cursor: default;
+    color: #7f8db0;
+}
+
+.profile .profile_dd ul li .btn{
+    height: 32px;
+    width: 125px;
+    background: #3b80f9;
+    padding: 7px 10px;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px auto 15px;
+}
+
+.profile .profile_dd ul li .btn:hover{
+    background: #6593e4;
+}
+
+.profile.active .profile_dd,
+.notifications.active .notifications_dd{
+    display: block;
+}
+
+.popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.popup.active{
+    display: block;
+}
+
+.popup .shadow{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+}
+
+.popup .popup_inner{
+   position: absolute; 
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+.popup .popup_inner .notifications_dd{
+    display: block;
+    position: static;
+    margin: 0 auto;
+    height: 357px;
+    overflow: auto;
+}
+
+.popup .popup_inner .notifications_dd:before{
+    display: none;
+}
+
+.popup .popup_inner .notifications_dd li.title{
+    font-weight: 700;
+    color: #3b80f9;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.popup .popup_inner .notifications_dd li.close{
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup .popup_inner .notifications_dd li.close:hover{
+    opacity: 0.5;
+}
